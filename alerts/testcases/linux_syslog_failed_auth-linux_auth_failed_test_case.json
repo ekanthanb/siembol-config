@@ -1,5 +1,4 @@
 {
-  "test_case_name": "linux_auth_failed_test_case",
   "description": "linux_auth_failed_test_case",
   "test_specification": {
     "event": {
@@ -10,7 +9,7 @@
   },
   "assertions": [
     {
-      "assertion_type": "path_and_value_matches",
+      "assertion_type": "only_if_path_exists",
       "json_path": "original_string",
       "expected_pattern": "authentication",
       "negated_pattern": false,
@@ -18,6 +17,7 @@
     }
   ],
   "author": "siembol",
-  "version": 1,
+  "version": 2,
+  "test_case_name": "linux_auth_failed_test_case",
   "config_name": "linux_syslog_failed_auth"
 }
