@@ -8,7 +8,7 @@
     "testing_table_name": "username",
     "testing_table_mapping": {
       "linux_syslog": {
-        "username": "linux-user"
+        "source_type": "linux-user"
       }
     }
   },
@@ -22,7 +22,7 @@
     }
   ],
   "author": "siembol",
-  "version": 2,
+  "version": 3,
   "test_case_name": "test_2",
   "config_name": "username"
 }
