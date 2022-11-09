@@ -1,24 +1,24 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 9,
+  "rule_version": 10,
   "source_type": "linux.syslogs",
   "matchers": [
     {
       "is_enabled": true,
       "matcher_type": "REGEX_MATCH",
       "is_negated": false,
-      "field": "source_type",
-      "data": "/linux_syslog/gm"
+      "field": "syslog_appname",
+      "data": "su"
     }
   ],
   "table_mapping": {
     "table_name": "username",
-    "joining_key": "${source_type}",
+    "joining_key": "${syslog_appname}",
     "enriching_fields": [
       {
-        "table_field_name": "source_type",
-        "event_field_name": "enriched_source"
+        "table_field_name": "syslog_hostname",
+        "event_field_name": "enriched_hostname"
       }
     ]
   }
