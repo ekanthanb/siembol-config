@@ -1,0 +1,25 @@
+{
+  "parser_name": "test",
+  "parser_version": 1,
+  "parser_author": "siembol",
+  "parser_description": "test",
+  "parser_attributes": {
+    "parser_type": "generic"
+  },
+  "parser_extractors": [
+    {
+      "is_enabled": true,
+      "name": "test",
+      "field": "original_string",
+      "extractor_type": "json_extractor",
+      "attributes": {
+        "should_overwrite_fields": false,
+        "should_remove_field": false,
+        "remove_quotes": true,
+        "skip_empty_values": false,
+        "thrown_exception_on_error": false,
+        "nested_separator": ":"
+      }
+    }
+  ]
+}
