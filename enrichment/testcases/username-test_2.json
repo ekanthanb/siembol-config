@@ -1,0 +1,28 @@
+{
+  "test_case_name": "test_2",
+  "test_specification": {
+    "event": {
+      "original_string": "2022-11-09T10:27:00.570949+05:30 ulaa-u20-aio sudo: pam_unix(sudo:auth): authentication failure; logname=test uid=1001 euid=0 tty=/dev/pts/4 ruser=test rhost=  user=test",
+      "source_type": "linux_syslog",
+      "timestamp": 1667977779811
+    },
+    "testing_table_name": "username",
+    "testing_table_mapping": {
+      "test": {
+        "username": "test-name"
+      }
+    }
+  },
+  "assertions": [
+    {
+      "assertion_type": "path_and_value_matches",
+      "json_path": "username",
+      "expected_pattern": "test-name",
+      "negated_pattern": false,
+      "active": true
+    }
+  ],
+  "author": "siembol",
+  "version": 1,
+  "config_name": "username"
+}
