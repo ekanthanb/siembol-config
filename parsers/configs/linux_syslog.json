@@ -1,9 +1,25 @@
 {
   "parser_name": "linux_syslog",
-  "parser_version": 4,
+  "parser_version": 5,
   "parser_author": "siembol",
   "parser_description": "Parser for linux syslogs sent in syslog format.",
   "parser_attributes": {
     "parser_type": "generic"
-  }
+  },
+  "parser_extractors": [
+    {
+      "is_enabled": true,
+      "name": "json",
+      "field": "original_string",
+      "extractor_type": "json_extractor",
+      "attributes": {
+        "should_overwrite_fields": true,
+        "should_remove_field": false,
+        "remove_quotes": true,
+        "skip_empty_values": false,
+        "thrown_exception_on_error": false,
+        "nested_separator": ":"
+      }
+    }
+  ]
 }
