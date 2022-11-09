@@ -1,6 +1,6 @@
 {
   "parser_name": "test",
-  "parser_version": 2,
+  "parser_version": 3,
   "parser_author": "siembol",
   "parser_description": "test",
   "parser_attributes": {
@@ -14,15 +14,15 @@
       "extractor_type": "key_value_extractor",
       "attributes": {
         "should_overwrite_fields": false,
-        "should_remove_field": false,
+        "should_remove_field": true,
         "remove_quotes": true,
-        "skip_empty_values": false,
+        "skip_empty_values": true,
         "thrown_exception_on_error": false,
         "word_delimiter": " ",
         "key_value_delimiter": "=",
         "escaped_character": "\\",
         "quota_value_handling": true,
-        "next_key_strategy": false,
+        "next_key_strategy": true,
         "escaping_handling": true,
         "rename_duplicate_keys": true
       }
