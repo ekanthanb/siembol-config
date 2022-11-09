@@ -1,14 +1,15 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 2,
+  "rule_version": 3,
   "source_type": "linux.syslogs",
   "matchers": [
     {
       "is_enabled": true,
-      "matcher_type": "REGEX_MATCH",
+      "matcher_type": "IS_IN_SET",
       "is_negated": false,
       "field": "original_string",
+      "case_insensitive": true,
       "data": "test"
     }
   ],
