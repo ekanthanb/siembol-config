@@ -1,7 +1,7 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 8,
+  "rule_version": 9,
   "source_type": "linux.syslogs",
   "matchers": [
     {
@@ -17,8 +17,8 @@
     "joining_key": "${source_type}",
     "enriching_fields": [
       {
-        "table_field_name": "username",
-        "event_field_name": "enriched_username"
+        "table_field_name": "source_type",
+        "event_field_name": "enriched_source"
       }
     ]
   }
