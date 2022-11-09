@@ -1,8 +1,8 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 10,
-  "source_type": "linux.syslogs",
+  "rule_version": 11,
+  "source_type": "linux_syslog",
   "matchers": [
     {
       "is_enabled": true,
