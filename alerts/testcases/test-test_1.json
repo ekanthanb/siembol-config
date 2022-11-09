@@ -1,0 +1,28 @@
+{
+  "test_case_name": "test_1",
+  "test_specification": {
+    "event": {
+      "ruser": "test",
+      "uid": "1001",
+      "euid": "0",
+      "2022-11-09T10:27:00.570949+05:30 ulaa-u20-aio sudo: pam_unix(sudo:auth): authentication failure; logname": "test",
+      "tty": "/dev/pts/4",
+      "source_type": "test",
+      "rhost": " ",
+      "user": "test",
+      "timestamp": 1667985170422
+    }
+  },
+  "assertions": [
+    {
+      "assertion_type": "only_if_path_exists",
+      "json_path": "ruser",
+      "expected_pattern": "(?i)test$",
+      "negated_pattern": false,
+      "active": true
+    }
+  ],
+  "author": "siembol",
+  "version": 1,
+  "config_name": "test"
+}
