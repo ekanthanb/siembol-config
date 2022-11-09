@@ -1,7 +1,7 @@
 {
   "test_specification": {
     "encoding": "utf8_string",
-    "log": "2022-11-09T10:27:00.570949+05:30 ulaa-u20-aio sudo: pam_unix(sudo:auth): authentication failure; logname=test uid=1001 euid=0 tty=/dev/pts/4 ruser=test rhost=  user=test"
+    "log": "<34>1 2022-11-09T22:14:15.003Z spm-test su - - - 'su root' failed for test on /var/log"
   },
   "assertions": [
     {
@@ -14,7 +14,7 @@
     }
   ],
   "author": "siembol",
-  "version": 2,
+  "version": 3,
   "test_case_name": "authentication_failure_log",
   "config_name": "linux_syslog"
 }
