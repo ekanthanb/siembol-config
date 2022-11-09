@@ -1,5 +1,5 @@
 {
-  "rules_version": 4,
+  "rules_version": 5,
   "rules": [
     {
       "rule_name": "ip_hostname",
@@ -50,6 +50,31 @@
           {
             "table_field_name": "number_of_row",
             "event_field_name": "dns_table_number_of_rows"
+          }
+        ]
+      }
+    },
+    {
+      "rule_name": "username",
+      "rule_author": "siembol",
+      "rule_version": 11,
+      "source_type": "linux_syslog",
+      "matchers": [
+        {
+          "is_enabled": true,
+          "matcher_type": "REGEX_MATCH",
+          "is_negated": false,
+          "field": "syslog_appname",
+          "data": "su"
+        }
+      ],
+      "table_mapping": {
+        "table_name": "username",
+        "joining_key": "${syslog_appname}",
+        "enriching_fields": [
+          {
+            "table_field_name": "syslog_hostname",
+            "event_field_name": "enriched_hostname"
           }
         ]
       }
