@@ -1,23 +1,24 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 1,
-  "source_type": "win_eventlogs",
+  "rule_version": 2,
+  "source_type": "linux.syslogs",
   "matchers": [
     {
+      "is_enabled": true,
       "matcher_type": "REGEX_MATCH",
       "is_negated": false,
-      "field": "IpAddress",
-      "data": "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"
+      "field": "original_string",
+      "data": "test"
     }
   ],
   "table_mapping": {
-    "table_name": "hostname",
-    "joining_key": "${IpAddress}",
+    "table_name": "username",
+    "joining_key": "${original_string}",
     "enriching_fields": [
       {
-        "table_field_name": "hostname",
-        "event_field_name": "enriched_hostname"
+        "table_field_name": "username",
+        "event_field_name": "enriched_username"
       }
     ]
   }
