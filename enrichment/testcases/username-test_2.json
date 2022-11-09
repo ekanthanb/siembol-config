@@ -1,5 +1,4 @@
 {
-  "test_case_name": "test_2",
   "test_specification": {
     "event": {
       "original_string": "2022-11-09T10:27:00.570949+05:30 ulaa-u20-aio sudo: pam_unix(sudo:auth): authentication failure; logname=test uid=1001 euid=0 tty=/dev/pts/4 ruser=test rhost=  user=test",
@@ -8,8 +7,8 @@
     },
     "testing_table_name": "username",
     "testing_table_mapping": {
-      "test": {
-        "username": "test-name"
+      "linux_syslog": {
+        "username": "linux-user"
       }
     }
   },
@@ -23,6 +22,7 @@
     }
   ],
   "author": "siembol",
-  "version": 1,
+  "version": 2,
+  "test_case_name": "test_2",
   "config_name": "username"
 }
