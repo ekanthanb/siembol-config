@@ -1,7 +1,7 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 3,
+  "rule_version": 4,
   "source_type": "linux.syslogs",
   "matchers": [
     {
@@ -10,7 +10,7 @@
       "is_negated": false,
       "field": "original_string",
       "case_insensitive": true,
-      "data": "test"
+      "data": "logname=test"
     }
   ],
   "table_mapping": {
