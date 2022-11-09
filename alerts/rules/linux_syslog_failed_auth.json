@@ -1,20 +1,18 @@
 {
   "rule_name": "linux_syslog_failed_auth",
   "rule_author": "siembol",
-  "rule_version": 3,
+  "rule_version": 4,
   "rule_description": "Alert for failed auth - linux syslog",
   "source_type": "linux_syslog",
   "matchers": [
     {
       "is_enabled": true,
       "description": "contains authentication failure",
-      "matcher_type": "CONTAINS",
+      "matcher_type": "IS_IN_SET",
       "is_negated": false,
-      "field": "original_string",
+      "field": "syslog_appname",
       "case_insensitive": true,
-      "starts_with": false,
-      "ends_with": false,
-      "data": "authentication failure"
+      "data": "su"
     }
   ],
   "rule_protection": {
