@@ -1,14 +1,9 @@
 {
   "parser_name": "linux_syslog",
-  "parser_version": 3,
+  "parser_version": 4,
   "parser_author": "siembol",
   "parser_description": "Parser for linux syslogs sent in syslog format.",
   "parser_attributes": {
-    "parser_type": "syslog",
-    "syslog_config": {
-      "syslog_version": "RFC_3164",
-      "merge_sd_elements": false,
-      "timezone": "UTC"
-    }
+    "parser_type": "generic"
   }
 }
