@@ -1,25 +1,20 @@
 {
   "rule_name": "linux_syslog_failed_auth",
   "rule_author": "siembol",
-  "rule_version": 2,
-  "rule_description": "Alert for 4625 failed logon - for correlation on user",
+  "rule_version": 3,
+  "rule_description": "Alert for failed auth - linux syslog",
   "source_type": "linux_syslog",
   "matchers": [
     {
       "is_enabled": true,
+      "description": "contains authentication failure",
       "matcher_type": "CONTAINS",
       "is_negated": false,
-      "field": "Message",
+      "field": "original_string",
       "case_insensitive": true,
       "starts_with": false,
       "ends_with": false,
       "data": "authentication failure"
-    }
-  ],
-  "tags": [
-    {
-      "tag_name": "correlation_key",
-      "tag_value": "${SubjectUserName}"
     }
   ],
   "rule_protection": {
