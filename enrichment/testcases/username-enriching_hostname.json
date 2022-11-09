@@ -1,5 +1,4 @@
 {
-  "test_case_name": "enriching_hostname",
   "test_specification": {
     "event": {
       "original_string": "<34>1 2022-11-09T22:14:15.003Z spm-test su - - - 'su root' failed for test on /var/log",
@@ -24,13 +23,14 @@
   "assertions": [
     {
       "assertion_type": "path_and_value_matches",
-      "json_path": "syslog_hostname",
-      "expected_pattern": "enriched_hostname",
+      "json_path": "enriched_hostname",
+      "expected_pattern": "root-user",
       "negated_pattern": false,
       "active": true
     }
   ],
   "author": "siembol",
-  "version": 1,
+  "version": 2,
+  "test_case_name": "enriching_hostname",
   "config_name": "username"
 }
