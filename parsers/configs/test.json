@@ -1,6 +1,6 @@
 {
   "parser_name": "test",
-  "parser_version": 1,
+  "parser_version": 2,
   "parser_author": "siembol",
   "parser_description": "test",
   "parser_attributes": {
@@ -11,14 +11,20 @@
       "is_enabled": true,
       "name": "test",
       "field": "original_string",
-      "extractor_type": "json_extractor",
+      "extractor_type": "key_value_extractor",
       "attributes": {
         "should_overwrite_fields": false,
         "should_remove_field": false,
         "remove_quotes": true,
         "skip_empty_values": false,
         "thrown_exception_on_error": false,
-        "nested_separator": ":"
+        "word_delimiter": " ",
+        "key_value_delimiter": "=",
+        "escaped_character": "\\",
+        "quota_value_handling": true,
+        "next_key_strategy": false,
+        "escaping_handling": true,
+        "rename_duplicate_keys": true
       }
     }
   ]
