@@ -1,7 +1,7 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 7,
+  "rule_version": 8,
   "source_type": "linux.syslogs",
   "matchers": [
     {
@@ -9,7 +9,7 @@
       "matcher_type": "REGEX_MATCH",
       "is_negated": false,
       "field": "source_type",
-      "data": "linux_syslog"
+      "data": "/linux_syslog/gm"
     }
   ],
   "table_mapping": {
