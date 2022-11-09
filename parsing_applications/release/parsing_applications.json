@@ -1,5 +1,5 @@
 {
-  "parsing_applications_version": 7,
+  "parsing_applications_version": 8,
   "parsing_applications": [
     {
       "parsing_app_name": "app_router",
@@ -55,7 +55,7 @@
     },
     {
       "parsing_app_name": "linux_syslog",
-      "parsing_app_version": 3,
+      "parsing_app_version": 4,
       "parsing_app_author": "siembol",
       "parsing_app_description": "Linux eventlogs parsing application",
       "parsing_app_settings": {
@@ -70,7 +70,8 @@
         "output_parallelism": 1,
         "parse_metadata": false,
         "max_num_fields": 300,
-        "max_field_size": 40000
+        "max_field_size": 40000,
+        "original_string_topic": "linux.syslogs"
       },
       "parsing_settings": {
         "single_parser": {
