@@ -1,0 +1,29 @@
+{
+  "rule_name": "test",
+  "rule_author": "siembol",
+  "rule_version": 1,
+  "rule_description": "fdsgsd",
+  "source_type": "linux.syslogs",
+  "matchers": [
+    {
+      "is_enabled": true,
+      "matcher_type": "CONTAINS",
+      "is_negated": false,
+      "field": "ruser",
+      "case_insensitive": true,
+      "starts_with": false,
+      "ends_with": false,
+      "data": "test"
+    },
+    {
+      "is_enabled": true,
+      "matcher_type": "CONTAINS",
+      "is_negated": false,
+      "field": "original_string",
+      "case_insensitive": true,
+      "starts_with": false,
+      "ends_with": false,
+      "data": "authentication failure"
+    }
+  ]
+}
