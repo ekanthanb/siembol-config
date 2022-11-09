@@ -1,16 +1,15 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 4,
+  "rule_version": 5,
   "source_type": "linux.syslogs",
   "matchers": [
     {
       "is_enabled": true,
-      "matcher_type": "IS_IN_SET",
+      "matcher_type": "REGEX_MATCH",
       "is_negated": false,
       "field": "original_string",
-      "case_insensitive": true,
-      "data": "logname=test"
+      "data": "/test/gm"
     }
   ],
   "table_mapping": {
