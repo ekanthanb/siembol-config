@@ -1,20 +1,20 @@
 {
   "rule_name": "username",
   "rule_author": "siembol",
-  "rule_version": 5,
+  "rule_version": 6,
   "source_type": "linux.syslogs",
   "matchers": [
     {
       "is_enabled": true,
       "matcher_type": "REGEX_MATCH",
       "is_negated": false,
-      "field": "original_string",
-      "data": "/test/gm"
+      "field": "source_type",
+      "data": "linux.syslogs"
     }
   ],
   "table_mapping": {
     "table_name": "username",
-    "joining_key": "${original_string}",
+    "joining_key": "${source_type}",
     "enriching_fields": [
       {
         "table_field_name": "username",
