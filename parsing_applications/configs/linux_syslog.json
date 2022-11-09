@@ -1,12 +1,12 @@
 {
   "parsing_app_name": "linux_syslog",
-  "parsing_app_version": 2,
+  "parsing_app_version": 3,
   "parsing_app_author": "siembol",
   "parsing_app_description": "Linux eventlogs parsing application",
   "parsing_app_settings": {
     "parsing_app_type": "single_parser",
     "input_topics": [
-      "linux.eventlogs"
+      "linux.syslogs"
     ],
     "error_topic": "siembol.indexing",
     "num_workers": 1,
@@ -20,7 +20,7 @@
   "parsing_settings": {
     "single_parser": {
       "output_topic": "siembol.enrichment",
-      "parser_name": "linux_syslogs"
+      "parser_name": "linux_syslog"
     }
   }
 }
