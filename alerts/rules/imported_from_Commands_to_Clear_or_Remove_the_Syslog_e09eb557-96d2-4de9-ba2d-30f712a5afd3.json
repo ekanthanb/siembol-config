@@ -1,0 +1,41 @@
+{
+  "rule_name": "imported_from_Commands_to_Clear_or_Remove_the_Syslog_e09eb557-96d2-4de9-ba2d-30f712a5afd3",
+  "rule_author": "siembol",
+  "rule_version": 1,
+  "rule_description": "Detects specific commands commonly used to remove or empty the syslog",
+  "source_type": "linux.syslogs",
+  "matchers": [
+    {
+      "is_enabled": true,
+      "matcher_type": "REGEX_MATCH",
+      "is_negated": false,
+      "field": "original_string",
+      "data": "\\Qrm /var/log/syslog\\E|\\Qrm -r /var/log/syslog\\E|\\Qrm -f /var/log/syslog\\E|\\Qrm -rf /var/log/syslog\\E|\\Qmv /var/log/syslog\\E|\\Q >/var/log/syslog\\E|\\Q > /var/log/syslog\\E"
+    },
+    {
+      "is_enabled": true,
+      "matcher_type": "REGEX_MATCH",
+      "is_negated": true,
+      "field": "original_string",
+      "data": "\\Q/syslog.\\E"
+    }
+  ],
+  "tags": [
+    {
+      "tag_name": "sigma_id",
+      "tag_value": "e09eb557-96d2-4de9-ba2d-30f712a5afd3"
+    },
+    {
+      "tag_name": "sigma_tags",
+      "tag_value": "[attack.impact, attack.t1565.001]"
+    },
+    {
+      "tag_name": "sigma_fp",
+      "tag_value": "[Log rotation]"
+    }
+  ],
+  "rule_protection": {
+    "max_per_hour": 30,
+    "max_per_day": 100
+  }
+}
